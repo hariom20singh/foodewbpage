@@ -1,7 +1,7 @@
 # foodewbpage
 
 Hacktoberfest-2023🔥
-![image](https://user-images.githubusercontent.com/70385488/192114009-0830321a-d227-4a4d-8411-6c03b54d7ce6.png)
+![image](https://raw.githubusercontent.com/ossamamehmood/Hacktoberfest2023/main/.github/logo.png)
 
 <div align="center">
 
