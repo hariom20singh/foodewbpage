@@ -1,3 +1,5 @@
+The code is implementing a solution to the "Trapping Rain Water" problem using arrays.
+The line `package Arrays;` is specifying the package name for the class `TrappingRainWater`. It is used to organize classes into different packages to avoid naming conflicts and provide better code organization. In this case, the class `TrappingRainWater` is part of the `Arrays` package.
 package Arrays;
 /* 
     DSA Sheet No. 22 
@@ -7,6 +9,7 @@ package Arrays;
 public class TrappingRainWater {
     public static int trapWater(int height[]) {
         int n = height.length;
+        The line `int leftMax[] = new int[n];` is creating an integer array called `leftMax` with a length of `n`. This array is used to store the maximum height of the buildings to the left of each building.
         int leftMax[] = new int[n] ;
         int rightMax[] = new int[n];
         leftMax[0] = height[0];
