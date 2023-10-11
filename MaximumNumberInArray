@@ -1,0 +1,26 @@
+public class MaximumNumberInArray {
+    public static void main(String[] args) {
+        int[] arr = {3, 1, 4, 1, 5, 9, 2, 6, 5};
+        int max = findMaximum(arr);
+        System.out.println("Maximum number in the array: " + max);
+    }
+
+    public static int findMaximum(int[] arr) {
+        // Check if the array is not empty
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+
+        // Initialize the maximum value with the first element
+        int max = arr[0];
+
+        // Iterate through the array to find the maximum value
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        return max;
+    }
+}
