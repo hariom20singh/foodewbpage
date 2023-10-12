@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class rect
+{
+    private:
+     int l; 
+     int w;
+    public:
+        void set(int l,int w);
+        int area()
+        {
+             return(l*w);
+
+        }
+        rect()
+        {
+            cout<<"constru-ctor 1";
+        }
+        rect(int l, int w)
+        {
+            cout<<"constructor 2";
+        }
+};
+void rect::set(int l,int w)
+{
+    this->l=l;
+    this->w=w;
+}
+int main()
+{
+    rect s;
+    s.set(3,4);
+    rect a(3,4);
+    cout<<"area is :"<<s.area()<<endl;
+    return 0;
+}
