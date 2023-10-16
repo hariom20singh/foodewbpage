@@ -1,0 +1,58 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Node {
+	int data;
+	Node left;
+	Node right;
+
+	Node(int val) {
+		data = val;
+		left = null;
+		right = null;
+	}
+}
+
+public class SymmetricBinaryTree {
+	public static boolean isSymmetric(Node root) {
+		if (root == null) {
+			return true;
+		}
+
+		Queue<Node> q = new LinkedList<>();
+		q.add(root);
+		q.add(root);
+
+		while (!q.isEmpty()) {
+			Node leftNode = q.poll();
+			Node rightNode = q.poll();
+
+			if (leftNode == null && rightNode == null) {
+				continue;
+			}
+
+			if (leftNode == null || rightNode == null || leftNode.data != rightNode.data) {
+				return false;
+			}
+
+			q.add(leftNode.left);
+			q.add(rightNode.right);
+			q.add(leftNode.right);
+			q.add(rightNode.left);
+		}
+		return true;
+	}
+	public static void main(String[] args) {
+		Node root = new Node(5);
+		root.left = new Node(1);
+		root.right = new Node(1);
+		root.left.left = new Node(2);
+		root.right.right = new Node(2);
+
+		if (isSymmetric(root)) {
+			System.out.println("The binary tree is symmetric");
+		} else {
+			System.out.println("The binary tree is not symmetric");
+		}
+	}
+}
